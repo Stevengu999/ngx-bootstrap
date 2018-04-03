@@ -70,7 +70,7 @@ export const demoComponentContent: ContentSection[] = [
         anchor: 'delay',
         description: `
           <p>Use to set minimal waiting time after last character typed before typeahead kicks-in.
-          In example a search begins with delay in 1 second</p>
+          In example a typeahead appears with delay in 1 second</p>
         `,
         component: require('!!raw-loader?lang=typescript!./demos/delay/delay.ts'),
         html: require('!!raw-loader?lang=markup!./demos/delay/delay.html'),
@@ -81,7 +81,8 @@ export const demoComponentContent: ContentSection[] = [
         anchor: 'forms',
         description: `
           <p>
-            Typeahead can be used in template-driven forms. Keep in mind that value of <code>ngModel</code> is string
+            Typeahead can be used in template-driven forms. Keep in mind that value of <code>ngModel</code> is
+            <code>string</code>
           </p>
         `,
         component: require('!!raw-loader?lang=typescript!./demos/form/form.ts'),
@@ -110,8 +111,9 @@ export const demoComponentContent: ContentSection[] = [
         anchor: 'single-world',
         component: require('!!raw-loader?lang=typescript!./demos/single-world/single-world.ts'),
         html: require('!!raw-loader?lang=markup!./demos/single-world/single-world.html'),
-        description: `If <code>typeaheadSingleWords=true</code> ignores spaces and seeking for matches with occurrences of entered words.
-          For example: <pre>ari zona -> Arizona</pre>`,
+        description: `After setting <code>typeaheadSingleWords</code> input property to <code>true</code>
+          order of typed symbols and spaces between them will be ignored. For example, <pre>zona ari</pre>
+          will match with <pre>Arizona</pre>`,
         outlet: DemoTypeaheadSingleWorldComponent
       },
       {
